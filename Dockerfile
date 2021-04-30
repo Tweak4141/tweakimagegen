@@ -27,8 +27,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt -y install wget \ 
     && apt -y install curl \
     && apt -y install imagemagick \
-    && apt -y install pythonmagick \
-    && apt -y install libmagickwand-dev
+    && apt -y install pythonmagick 
     
 # Install basic software support
 RUN apt-get update && \
