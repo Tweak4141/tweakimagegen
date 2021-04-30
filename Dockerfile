@@ -1,6 +1,6 @@
 FROM debian:buster
 
-
+MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 RUN apt update \
     && apt upgrade -y \
     && apt -y install curl software-properties-common locales git \
@@ -39,7 +39,6 @@ ENV  USER container
 ENV  HOME /home/container
 
 WORKDIR /home/container
-
 COPY ./entrypoint.sh /entrypoint.sh
 
 CMD ["/bin/bash", "/entrypoint.sh"]
