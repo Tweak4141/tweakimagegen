@@ -10,8 +10,11 @@ RUN apt update \
 
     # Grant sudo permissions to container user for commands
 RUN apt-get update && \
-    apt-get -y install sudo
-
+    apt-get -y install sudo 
+RUN apt-get update && apt-get install -y \
+    imagemagick libmagickwand-dev --no-install-recommends \
+    && pecl install imagick 
+   
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -25,7 +28,8 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
     && apt -y install build-essential \
     && apt -y install wget \ 
     && apt -y install curl \
-    && apt -y install imagemagick
+    && apt -y install imagemagick \
+    && apt -y install pythonmagick
     
 # Install basic software support
 RUN apt-get update && \
