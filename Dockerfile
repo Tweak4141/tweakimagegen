@@ -35,7 +35,7 @@ RUN apt-get update && \
     apt-get install --yes software-properties-common
     
     # Python 2 & 3
-RUN apt -y install python python-pip python3 python3-pip
+RUN apt -y install python3 python3-pip
 
 USER container
 ENV  USER container
