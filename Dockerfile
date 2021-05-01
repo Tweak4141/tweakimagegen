@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get -y install sudo apt-utils
     
 RUN apt-get update && apt-get install -y \
-    imagemagick libmagickwand-dev pythonmagick --no-install-recommends 
+    imagemagick libmagickwand-dev python-pythonmagick --no-install-recommends 
 
    
     # Ensure UTF-8
