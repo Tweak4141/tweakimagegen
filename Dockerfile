@@ -12,6 +12,10 @@ RUN apt update \
 RUN apt-get update && \
     apt-get -y install sudo 
     
+RUN apt-get update && apt-get install -y \
+    imagemagick libmagickwand-dev --no-install-recommends \
+    && pecl install imagick \
+
    
     # Ensure UTF-8
 RUN locale-gen en_US.UTF-8
