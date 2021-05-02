@@ -3,7 +3,6 @@
 # Environment: python3
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-#Triggered
 FROM        python:3.9-slim
 
 LABEL       author="Tweak4141" maintainer="tweak@daftscientist.com"
