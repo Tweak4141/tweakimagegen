@@ -10,6 +10,7 @@ LABEL       author="Tweak4141" maintainer="tweak@daftscientist.com"
 
 RUN         apt update \
             && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps imagemagick libmagickwand-dev python-pythonmagick --no-install-recommends \
+            && sed -i '/<policy domain="path" rights="none" pattern="@\*"/d' /etc/ImageMagick-6/policy.xml
             && useradd -m -d /home/container container
 
 USER        container
